@@ -1,0 +1,52 @@
+.header{
+		height:78px;
+		background:#47cc8c;
+	}
+	.logo{
+		width:200px;
+		height:43px;
+		float:left;
+		color:white;
+		margin-left:100px;
+		margin-top:15px;
+		font-size:30px;
+		
+	}
+	.nav{
+		width:340px;
+		float:left;
+		margin-top:15px;
+	}
+	.nav li{
+		float:left;
+		width:80px;
+		padding:10px;
+		text-align:left;
+		color:white;
+		list-style:none;
+		
+	}
+	.logre li{
+		float:left;
+		width:40px;
+		color:white;
+		list-style:none;
+		font-size:13px;
+	}
+	.logre a{
+		color:white;
+		text-decroation:none;
+	}
+	.logre a:hover{
+		float:left;
+		width:40px;
+		color:white;
+		list-style:none;
+		font-size:13px;
+		text-style:underline;
+	}
+	.logre{
+		position:relative;
+		left:500px;
+		top:30px;
+	}
