@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.comfine.javabean.Teacher;
 import com.comfine.javabean.User;
+import com.comfine.jdbctemplate.TeacherJdbcTemplate;
+import com.comfine.jdbctemplate.UserJdbcTemplate;
 import com.comfine.service.UserService;
 
 
@@ -52,6 +55,14 @@ public class UserController{
 		}
 		return userService.login(user);
    }
-	
+	@RequestMapping(value="/teacher",method = RequestMethod.GET)
+	public ModelAndView printTeache(){
+		
+		TeacherJdbcTemplate t = TeacherJdbcTemplate.getTeacherJdbc();
+		Teacher a = t.getTeacherById(123);
+//		int a =0;
+		return new ModelAndView("teacher","teacher",a);
+		
+	}
 	
 }

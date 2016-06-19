@@ -9,30 +9,33 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="E:/Jsp/apache-tomcat-7.0.68/lib/mysql-connector-java-5.1.38-bin.jar"/>
-	<classpathentry kind="lib" path="E:/Jsp/apache-tomcat-7.0.68/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-aop-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-aspects-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-beans-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-context-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-context-support-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-core-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-expression-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-instrument-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-instrument-tomcat-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-jdbc-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-jms-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-messaging-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-orm-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-oxm-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-test-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-tx-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-web-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-webmvc-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-webmvc-portlet-4.3.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="C:/Users/PeterYe/Desktop/实习/spring-framework-4.3.0.RELEASE/apijar/spring-websocket-4.3.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="bin/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="bin/jstl.jar"/>
 	<classpathentry kind="lib" path="bin/standard.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-aop-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-aspects-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-beans-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-support-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-core-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-expression-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-instrument-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-instrument-tomcat-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-jdbc-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-jms-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-messaging-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-orm-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-oxm-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-test-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-tx-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-portlet-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-websocket-4.3.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

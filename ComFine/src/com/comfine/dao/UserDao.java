@@ -23,6 +23,10 @@ public interface UserDao {
 	 */
 	public List<User> listUsers();
 	/**
+	 * 该方法用来获取用户自定义的sql语句
+	 */
+	public List<User> excuteSql(String sql);
+	/**
 	 * 该方法用来删除一条记录
 	 */
 	public void delete(int id);
