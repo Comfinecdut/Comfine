@@ -3,7 +3,6 @@ package com.comfine.javabean;
 import java.sql.Date;
 
 public class Teacher {
-<<<<<<< HEAD
 private int teacher_id;
 private int serve_id;
 private String teachername;
@@ -54,56 +53,4 @@ public void setFacepath(String facepath) {
 	this.facepath = facepath;
 }
 
-=======
-	private int teacher_id;
-	private int serve_id;
-	private String teachername;
-	private String introduce;
-	private float price;
-	private Date date;
-	private String facepath;
-	public int getTeacher_id() {
-		return teacher_id;
-	}
-	public void setTeacher_id(int teacher_id) {
-		this.teacher_id = teacher_id;
-	}
-	public int getServe_id() {
-		return serve_id;
-	}
-	public void setServe_id(int serve_id) {
-		this.serve_id = serve_id;
-	}
-	public String getTeachername() {
-		return teachername;
-	}
-	public void setTeachername(String teachername) {
-		this.teachername = teachername;
-	}
-	public String getIntroduce() {
-		return introduce;
-	}
-	public void setIntroduce(String introduce) {
-		this.introduce = introduce;
-	}
-	public float getPrice() {
-		return price;
-	}
-	public void setPrice(float price) {
-		this.price = price;
-	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public String getFacepath() {
-		return facepath;
-	}
-	public void setFacepath(String facepath) {
-		this.facepath = facepath;
-	}
-	
->>>>>>> ef613a9e5942e2f48859bc8c2ac275ed51d13c42
 }
