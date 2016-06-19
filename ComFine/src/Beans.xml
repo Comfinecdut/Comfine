@@ -13,6 +13,10 @@
    <bean id="userJdbcTemplate" class="com.comfine.jdbctemplate.UserJdbcTemplate">
    		<property name="dataSource"  ref="dataSource"/>
    </bean>
+   <bean id="realUserJdbcTemplate" class="com.comfine.jdbctemplate.RealUserJdbcTemplate">
+   		<property name="dataSource"  ref="dataSource"/>
+   </bean>
+ 
    
 
 </beans>

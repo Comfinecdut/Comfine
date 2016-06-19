@@ -5,20 +5,26 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
+
 import org.springframework.web.servlet.ModelAndView;
 
+import com.comfine.javabean.RealUser;
 import com.comfine.javabean.User;
+import com.comfine.jdbctemplate.RealUserJdbcTemplate;
 import com.comfine.jdbctemplate.UserJdbcTemplate;
 
 @Service
 public class UserService {
 
+	private static ApplicationContext context =
+	  new  ClassPathXmlApplicationContext("Beans.xml");
+	
+	
 	public ModelAndView addUser(User user) {
 		
-		ApplicationContext context = new 
-				ClassPathXmlApplicationContext("Beans.xml");
-		UserJdbcTemplate userJdbcTemplate = 
-				(UserJdbcTemplate)context.getBean("userJdbcTemplate");
+		UserJdbcTemplate userJdbcTemplate
+			=(UserJdbcTemplate)context.getBean("userJdbcTemplate");
+		
 		List<User> users = userJdbcTemplate.listUsers();
 		// 查看用户名和手机是否注册
 		for(User user1:users){
@@ -31,7 +37,7 @@ public class UserService {
 		}
 		// 添加用户
 		userJdbcTemplate.create(user);
-		return new ModelAndView("userlogin");
+		return new ModelAndView("person");
 	}
 	/**
 	 * 用户登录
@@ -39,11 +45,9 @@ public class UserService {
 	 * @return
 	 */
 	public ModelAndView login(User user) {
-		ApplicationContext context = new 
-				ClassPathXmlApplicationContext("Beans.xml");
-		UserJdbcTemplate userJdbcTemplate = 
-				(UserJdbcTemplate)context.getBean("userJdbcTemplate");
-		
+		UserJdbcTemplate userJdbcTemplate
+		=(UserJdbcTemplate)context.getBean("userJdbcTemplate");
+	
 		List<User> users = userJdbcTemplate.listUsers();
 		int userid = -1;
 		if(!users.isEmpty()){
@@ -65,9 +69,25 @@ public class UserService {
 				return new ModelAndView("userlogin","info","密码错误");
 			}
 			else{
-				return new ModelAndView("myhome");
+				 
+				return new ModelAndView("myhome","user",user);
 			}
 		}
+	}
+	/**
+	 * 
+	 * @param ru	
+	 * @return
+	 */
+	public ModelAndView addTrueUser(RealUser ru) {
+		// 添加实名认证
+		RealUserJdbcTemplate realUserJdbcTemplate = 
+				(RealUserJdbcTemplate) context.getBean("realUserJdbcTemplate");
+		// 上传文件
+		// 修改为服务器路径
+		// 导入数据库
+		realUserJdbcTemplate.create(ru);
+		return new ModelAndView("/");
 	}
 
 }
