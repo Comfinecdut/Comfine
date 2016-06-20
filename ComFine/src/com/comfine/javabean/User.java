@@ -5,8 +5,10 @@ public class User {
 	private String userName;
 	private String userPwd;
 	private String tel;
+	private String facepath;
+	private int role_id;
 	/**
-	 * Í·ÏñµÄÂ·¾¶
+	 * Í·ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 	 */
 	private String picpath;
 	
@@ -40,6 +42,18 @@ public class User {
 	}
 	public void setPicpath(String picpath) {
 		this.picpath = picpath;
+	}
+	public String getFacepath() {
+		return facepath;
+	}
+	public void setFacepath(String facepath) {
+		this.facepath = facepath;
+	}
+	public int getRole_id() {
+		return role_id;
+	}
+	public void setRole_id(int role_id) {
+		this.role_id = role_id;
 	}
 
 }

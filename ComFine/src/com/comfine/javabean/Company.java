@@ -4,7 +4,6 @@ import java.sql.Date;
 
 public class Company {
 	private int company_id;
-	private int serve_id;
 	private String companyname;
 	private String information;
 	private String tel;
@@ -14,12 +13,6 @@ public class Company {
 	}
 	public void setCompany_id(int company_id) {
 		this.company_id = company_id;
-	}
-	public int getServe_id() {
-		return serve_id;
-	}
-	public void setServe_id(int serve_id) {
-		this.serve_id = serve_id;
 	}
 	public String getCompanyname() {
 		return companyname;

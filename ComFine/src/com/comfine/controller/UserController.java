@@ -1,7 +1,5 @@
 package com.comfine.controller;
 
-
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -16,53 +14,55 @@ import com.comfine.jdbctemplate.TeacherJdbcTemplate;
 import com.comfine.jdbctemplate.UserJdbcTemplate;
 import com.comfine.service.UserService;
 
-
 @Controller
-public class UserController{
-	
-	@Resource 
+public class UserController {
+
+	@Resource
 	UserService userService;
-	
-	@RequestMapping(value="/",method = RequestMethod.GET)
-    public ModelAndView toLogin() {
-     return new ModelAndView("userlogin");
-   }
-	
-	@RequestMapping(value="/register",method = RequestMethod.GET)
-    public ModelAndView toRegister() {
-     return new ModelAndView("register");
-   }
-	@RequestMapping(value="/adduser",method = RequestMethod.POST)
-    public ModelAndView addUser( User user) {
-		if(user.getUserName().equals("")){
-			return new ModelAndView("register","info","ÓÃ»§Ãû²»ÄÜÎª¿Õ");
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView toLogin() {
+		return new ModelAndView("userlogin");
+	}
+
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public ModelAndView toRegister() {
+		return new ModelAndView("register");
+	}
+
+	@RequestMapping(value = "/adduser", method = RequestMethod.POST)
+	public ModelAndView addUser(User user) {
+		if (user.getUserName().equals("")) {
+			return new ModelAndView("register", "info", "æ²¡è¾“ç”¨æˆ·å");
 		}
-		if(user.getUserPwd().equals("")){
-			return new ModelAndView("register","info","ÃÜÂë²»ÄÜÎª¿Õ");
+		if (user.getUserPwd().equals("")) {
+			return new ModelAndView("register", "info", "æ²¡è¾“å¯†ç ");
 		}
-		if(user.getTel().equals("")){
-			return new ModelAndView("register","info","ÊÖ»úºÅ²»ÄÜÎª¿Õ");
+		if (user.getTel().equals("")) {
+			return new ModelAndView("register", "info", "æ²¡è¾“ç”µè¯");
 		}
 		return userService.addUser(user);
-   }
-	@RequestMapping(value="/dologin",method = RequestMethod.POST)
-    public ModelAndView doLogin(User user) {
-		if(user.getUserName().equals("")){
-			return new ModelAndView("userlogin","info","ÓÃ»§Ãû²»ÄÜÎª¿Õ");
+	}
+
+	@RequestMapping(value = "/dologin", method = RequestMethod.POST)
+	public ModelAndView doLogin(User user) {
+		if (user.getUserName().equals("")) {
+			return new ModelAndView("userlogin", "info", "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 		}
-		if(user.getUserPwd().equals("")){
-			return new ModelAndView("userlogin","info","ÃÜÂë²»ÄÜÎª¿Õ");
+		if (user.getUserPwd().equals("")) {
+			return new ModelAndView("userlogin", "info", "ï¿½ï¿½ï¿½ë²»ï¿½ï¿½Îªï¿½ï¿½");
 		}
 		return userService.login(user);
-   }
-	@RequestMapping(value="/teacher",method = RequestMethod.GET)
-	public ModelAndView printTeache(){
-		
+	}
+
+	@RequestMapping(value = "/teacher", method = RequestMethod.GET)
+	public ModelAndView printTeache() {
+
 		TeacherJdbcTemplate t = TeacherJdbcTemplate.getTeacherJdbc();
 		Teacher a = t.getTeacherById(123);
-//		int a =0;
-		return new ModelAndView("teacher","teacher",a);
-		
+		// int a =0;
+		return new ModelAndView("teacher", "teacher", a);
+
 	}
-	
+
 }

@@ -17,7 +17,6 @@ public class CompanyMapper implements RowMapper<Company> {
 		company.setCompanyname(rs.getString("companyname"));
 		company.setDate(rs.getDate("date"));
 		company.setInformation(rs.getString("information"));
-		company.setServe_id(rs.getInt("serve_id"));
 		company.setTel(rs.getString("tel"));
 		return company;
 	}

@@ -16,16 +16,16 @@ public class UserJdbcTemplate implements UserDao {
 
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplataObject;
-	private static UserJdbcTemplate userJdbcTemplate = null; // ¾²Ì¬±äÁ¿
+	private static UserJdbcTemplate userJdbcTemplate = null; // ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
 
-	static { // ¾²Ì¬³õÊ¼»¯
+	static { // ï¿½ï¿½Ì¬ï¿½ï¿½Ê¼ï¿½ï¿½
 		userJdbcTemplate = new UserJdbcTemplate();
-		ApplicationContext context = new // Í¨¹ý¶ÁÈ¡ÅäÖÃÎÄ¼þµÃµ½ÊµÀý
+		ApplicationContext context = new // Í¨ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ãµï¿½Êµï¿½ï¿½
 		ClassPathXmlApplicationContext("Beans.xml");
 		userJdbcTemplate = (UserJdbcTemplate) context.getBean("userJdbcTemplate");
 	}
 
-	public static UserJdbcTemplate getUserJdbcInstance() { // ·µ»ØuserJdbcTemplate¶ÔÏóÊµÀý
+	public static UserJdbcTemplate getUserJdbcInstance() { // ï¿½ï¿½ï¿½ï¿½userJdbcTemplateï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 		return userJdbcTemplate;
 	}
 
@@ -60,7 +60,7 @@ public class UserJdbcTemplate implements UserDao {
 	public void delete(int id) {
 		String sql = "delete from tbl_user where id=?";
 		jdbcTemplataObject.update(sql, id);
-		System.out.println("É¾³ýÁËidÎª" + id + "µÄ¼ÇÂ¼");
+		System.out.println("É¾ï¿½ï¿½ï¿½ï¿½idÎª" + id + "ï¿½Ä¼ï¿½Â¼");
 	}
 
 	@Override

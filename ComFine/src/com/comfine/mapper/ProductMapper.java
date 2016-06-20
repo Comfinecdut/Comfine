@@ -15,10 +15,11 @@ public class ProductMapper implements RowMapper<Product> {
 		Product product=new Product();
 		product.setDate(rs.getDate("date"));
 		product.setIntroduce(rs.getString("introduce"));
-		product.setNeed(rs.getInt("need"));
 		product.setProduct_id(rs.getInt("product_id"));
-		product.setProductname(rs.getString("productname"));
+		product.setProduct_name(rs.getString("product_name"));
 		product.setType(rs.getString("type"));
+		product.setSever_id(rs.getInt("sever_id"));
+		product.setCompany_id(rs.getInt("company_id"));
 		return product;
 	}
 

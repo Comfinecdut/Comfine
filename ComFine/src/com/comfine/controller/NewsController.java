@@ -14,23 +14,22 @@ import com.comfine.service.NewsService;
 
 @Controller
 public class NewsController {
-@Resource
-NewsService nService;
-	
-	@RequestMapping(value="/addnews",method = RequestMethod.POST)
-	public String addNews(News news,ModelMap model){
-	if(nService.addNews(news)){
-	model.addAttribute("message", "�ϴ��ɹ�");
+	@Resource
+	NewsService nService;
+
+	@RequestMapping(value = "/addnews", method = RequestMethod.POST)
+	public String addNews(News news, ModelMap model) {
+		if (nService.addNews(news)) {
+			model.addAttribute("message", "ddd");
+		} else {
+			model.addAttribute("message", "ccc");
 		}
-else{model.addAttribute("message", "�ϴ��ɹ�");}
-	System.out.println("新闻内容:"+news.getContent()+" 新闻up:"+news.getUp());
-return "redirect:newsupdate";
-
-	}
-@RequestMapping(value="/newsupdate",method =RequestMethod.GET )
-public ModelAndView newsUpdate(){
-	return new ModelAndView("newsupdate","command",new News());
-	
-}	
+		System.out.println("新闻内容:" + news.getContent() + " 新闻up:" + news.getUp());
+		return "redirect:newsupdate";
 	}
 
+	@RequestMapping(value = "/newsupdate", method = RequestMethod.GET)
+	public ModelAndView newsUpdate() {
+		return new ModelAndView("newsupdate", "command", new News());
+	}
+}
