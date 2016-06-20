@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${teacher.serve_id} 
+${teacher.getServe_id()} 
 </body>
 </html>

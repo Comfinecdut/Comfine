@@ -81,7 +81,7 @@ document.onclick = hidmenu;
 </header>
 
 <div class="fabu">
-	<form action="addnews" method="post" class="bootstrap-frm">
+	<form action="addnews" method="post"  enctype="multipart/form-data"  class="bootstrap-frm">
 <div ><h1>新闻发布
 <span>惠家网新闻发布</span>
 </h1>
@@ -98,7 +98,7 @@ document.onclick = hidmenu;
 <span>新闻类容 :</span>
 <textarea id="message" name="content" placeholder="新闻类容"></textarea>
 <div id="preview"></div>  
-<input type="file" onchange="preview(this)" />  
+<input type="file" name = "imageFile"  onchange="preview(this)" />  
 </label>
 <label>
 <span>类别 :</span><select name="selection">

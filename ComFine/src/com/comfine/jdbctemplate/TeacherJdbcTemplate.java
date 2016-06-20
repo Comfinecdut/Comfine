@@ -16,8 +16,15 @@ public class TeacherJdbcTemplate implements TeacherDao{
 	private static DataSource dataSource;
 	private static JdbcTemplate jdbcTemplataObject;
 	private static TeacherJdbcTemplate teacherJdbcTemplate = null;
+	private String table;
 	
-	
+	public String getTable() {
+		return table;
+	}
+	public void setTable(String table) {
+		this.table = table;
+	}
+
 	static {
 		teacherJdbcTemplate = new TeacherJdbcTemplate();
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
@@ -41,7 +48,7 @@ public class TeacherJdbcTemplate implements TeacherDao{
 	}
 	@Override
 	public Teacher getTeacherById(int id) {
-		String sql = "SELECT * FROM tbl_teacher where teacher_id = 123";
+		String sql = "SELECT * FROM "+ this.table+ " where teacher_id = 123";
 		Teacher teacher = new Teacher();
 		teacher = jdbcTemplataObject.queryForObject(sql, new TeacherMapper());
 		return teacher;
@@ -52,7 +59,7 @@ public class TeacherJdbcTemplate implements TeacherDao{
 		String sql = "INSERT INTO tbl_teacher VALUES(?,?,?,?,?,?,?,?)";
 		jdbcTemplataObject.update(sql,
 				teacher.getTeacher_id(),
-				teacher.getServe_id(),
+//				teacher.getServe_id(),
 				teacher.getTeachername(),
 				teacher.getIntroduce(),
 				teacher.getPrice(),
@@ -70,7 +77,7 @@ public class TeacherJdbcTemplate implements TeacherDao{
 	
 	@Override
 	public List<Teacher> getAllTeachers() {
-		String sql = "SELECT * FROM tbl_user";
+		String sql = "SELECT * FROM "+this.table;
 		List<Teacher> teachers = jdbcTemplataObject.query(sql, new TeacherMapper());
 		return teachers;
 	}

@@ -12,14 +12,14 @@ public class TeacherMapper implements RowMapper<Teacher> {
 
 	@Override
 	public Teacher mapRow(ResultSet rs, int row) throws SQLException {
-		//teacher¶ÔÏóµÄÓ³Éä
+		//teacherï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½
 		Teacher teacher = new Teacher();
-		teacher.setTeacher_id(rs.getInt("teacher_id"));
+    	teacher.setTeacher_id(rs.getInt("teacher_id"));
 		teacher.setTeachername(rs.getString("teachername"));
 		teacher.setFacepath(rs.getString("facepath"));
 		teacher.setIntroduce(rs.getString("introduce"));
 //		teacher.setDatetime(rs.getDate("datetime"));
-		teacher.setServe_id(rs.getInt("serve_id"));
+	//	teacher.setServe_id(rs.getInt("serve_id"));
 		teacher.setPrice(rs.getFloat("price"));
 		return teacher;
 		

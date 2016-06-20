@@ -13,7 +13,7 @@ public class NewsMapper implements RowMapper<News> {
 	public News mapRow(ResultSet rs, int row) throws SQLException {
 		// TODO Auto-generated method stub
 		News news=new News();
-		news.setNews_id(rs.getInt("new_id"));
+		news.setNews_id(rs.getInt("news_id"));
 		news.setContent(rs.getString("content"));
 		news.setTitle(rs.getString("title"));
 		news.setPath(rs.getString("path"));
