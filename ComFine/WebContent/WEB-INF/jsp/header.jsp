@@ -14,7 +14,7 @@
         </div>
 		<div class="logre">
 			<ul>
-				<li><a href="#">登录</a></li>
+				<li><a href="">登录</a></li>
 				<li><a href="register">注册</a></li>
 			</ul>
 				

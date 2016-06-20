@@ -1,3 +1,14 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/jsp/header.jsp=UTF-8
+<<<<<<< HEAD
 encoding//WebContent/WEB-INF/jsp/news/newshoutai.jsp=UTF-8
+=======
+<<<<<<< HEAD
+encoding//src/com/comfine/controller/NewsController.java=UTF-8
+encoding//src/com/comfine/controller/UserController.java=UTF-8
+encoding/<project>=UTF-8
+=======
+encoding//WebContent/WEB-INF/jsp/myhome.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/person.jsp=UTF-8
+>>>>>>> 6b38a4eb5a20f3c05f34d9cfb948122a3830dcf5
+>>>>>>> 9a33bdbc32e9d9b0ebed1c6dec2af36fe0ec8848

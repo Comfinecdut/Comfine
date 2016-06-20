@@ -13,15 +13,29 @@
    <bean id="userJdbcTemplate" class="com.comfine.jdbctemplate.UserJdbcTemplate">
    		<property name="dataSource"  ref="dataSource"/>
    </bean>
+<<<<<<< HEAD
     <bean id="teacherJdbcTemplate" class="com.comfine.jdbctemplate.TeacherJdbcTemplate">															  
    		<property name="dataSource"  ref="dataSource"/>
    		<property name="table"  value="tbl_teacher"/>
    </bean>
  <bean id="newsJdbcTemplate" class="com.comfine.jdbctemplate.NewsJdbcTemplate">															  
    		<property name="dataSource"  ref="dataSource"/>
+<<<<<<< HEAD
   	
    </bean>   
   
  
+=======
+   </bean>
+
+   
+=======
+   <bean id="realUserJdbcTemplate" class="com.comfine.jdbctemplate.RealUserJdbcTemplate">
+   		<property name="dataSource"  ref="dataSource"/>
+   </bean>
+ 
+>>>>>>> 6b38a4eb5a20f3c05f34d9cfb948122a3830dcf5
+   
+>>>>>>> 9a33bdbc32e9d9b0ebed1c6dec2af36fe0ec8848
 
 </beans>

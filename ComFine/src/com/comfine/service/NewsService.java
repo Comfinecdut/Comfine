@@ -12,9 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.comfine.javabean.News;
 import com.comfine.jdbctemplate.NewsJdbcTemplate;
 
-
 @Service
 public class NewsService {
+<<<<<<< HEAD
 public NewsJdbcTemplate nJdbc = NewsJdbcTemplate.getNewsJdbcInstance();
 public boolean addNews(News news,String uploadUrl,String filename,MultipartFile imageFile){
 	
@@ -70,4 +70,10 @@ public ModelAndView news_control() {
 //			}
 	return new ModelAndView("/news/newshoutai","message",news);
 }
+=======
+	public boolean addNews(News news) {
+		System.out.println(news.getContent());
+		return true;
+	}
+>>>>>>> 9a33bdbc32e9d9b0ebed1c6dec2af36fe0ec8848
 }

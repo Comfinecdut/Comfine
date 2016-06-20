@@ -25,6 +25,7 @@ import com.comfine.service.NewsService;
 
 @Controller
 public class NewsController {
+<<<<<<< HEAD
 
 @Resource
 NewsService nService;
@@ -68,4 +69,24 @@ public ModelAndView newsControl(){
 
 }
 	
+=======
+	@Resource
+	NewsService nService;
 
+	@RequestMapping(value = "/addnews", method = RequestMethod.POST)
+	public String addNews(News news, ModelMap model) {
+		if (nService.addNews(news)) {
+			model.addAttribute("message", "ddd");
+		} else {
+			model.addAttribute("message", "ccc");
+		}
+		System.out.println("新闻内容:" + news.getContent() + " 新闻up:" + news.getUp());
+		return "redirect:newsupdate";
+	}
+>>>>>>> 9a33bdbc32e9d9b0ebed1c6dec2af36fe0ec8848
+
+	@RequestMapping(value = "/newsupdate", method = RequestMethod.GET)
+	public ModelAndView newsUpdate() {
+		return new ModelAndView("newsupdate", "command", new News());
+	}
+}
