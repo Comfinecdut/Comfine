@@ -107,7 +107,14 @@
 			<div class="user_pic">
 				<div class="pic">
 				</div>
-				<button id="up_pic">上传</button>
+				<form id="upform" method='post' enctype="multipart/form-data" action="jsp/upload.jsp">
+				<tr>
+					<td>
+						<input accept="image/gif, image/jpeg, image/x-png" type="file" 
+						action-type="changeFile" node-type="file1" name="pic1" />
+					</td>
+				</tr>
+				</form>
 			</div>
 			<div>
 			
